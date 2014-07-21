@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Contact</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href='http://fonts.googleapis.com/css?family=BenchNine:400,700|Economica:400,700,700italic|Wire+One|Enriqueta:400,700|Oswald:400,700,300' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div class="page_wrapper">
+		<div class="sidebar">
+			<ul class="nav_fixed">
+				<li><a href="index.html"><img class="logo" src="images/logo2_small.png" height="124" width="150" alt=""></a>
+				</li>	
+				<li><a href="">About us</a>
+					<ul class="sub_nav_fixed">
+						<li><a href="">History</a></li>
+						<li><a href="">Staffs</a></li>
+					</ul>
+				</li>
+				<li><a href="menu.html">Menu</a></li>
+				
+				<li><a href="find_us.html">Find Us</a></li>
+				<li><a href="contact.html">Contact Us</a></li>
+			</ul>
+
+			<img class="burrito tossing"src="images/burrito.png"  alt="">
+
+			<ul class="socio">
+				<li><a href=""><img src="images/icons/facebook2.png" height="36" width="36" alt=""></a></li>
+				<li><a href=""><img src="images/icons/twitter3.png" height="36" width="36" alt=""></a></li>
+				<li><a href=""><img src="images/icons/instagram2.png" height="36" width="36" alt=""></a></li>
+			</ul>
+			
+		</div><!-- sidebar -->
+
+		<div class="content">
+			<h3 class="pagehead">Contact</h3>
+			<script>
+				<?php
+				if ($_POST['submit']) {
+				    if (mail ($to, $subject, $body, $from)) { 
+				        echo '<p>Your message has been sent!</p>';
+				    } else { 
+				        echo '<p>Something went wrong, go back and try again!</p>'; 
+				    }
+					}
+				?>
+			</script>
+			<div class="form">
+				<form method="post" action="index.php">
+        
+				    <label>Nombre</label>
+				    <input name="name" placeholder="Type Here">
+				            
+				    <label>Correo electrónico</label>
+				    <input name="email" type="email" placeholder="Type Here">
+				            
+				    <label>Su Mensaje</label>
+				    <textarea name="message" placeholder="Type Here"></textarea>
+				            
+				    <input id="submit" name="submit" type="submit" value="Submit">
+        
+				</form>
+			</div><!-- form -->
+			
+		</div><!-- content -->
+
+	</div><!-- wrapper -->
+
+
+	
+</body>
+</html>
